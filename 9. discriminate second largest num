@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    int middle;
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a > b)
+    {
+        if (b > c) middle = b;
+        else if (c < a) middle = c;
+        else if (c > a) middle = a;
+    }
+    else
+    {
+         if (b < c) middle = b;
+         else if (c < a) middle = a;
+         else if (c > a) middle = c;
+    }
+    // 세 개가 모두 다를 때 
+    
+    if (a == b)
+    {
+        if (a > c) middle = c;
+        else middle = a;
+    }
+    else 
+    {
+        if (b == c)
+        {
+            if (b > a) middle = a;
+            else if (b < a) middle = c;
+        }
+        else if (a == c)
+        {
+            if (a > b) middle = b;
+            else if (a < b) middle = a;
+        }
+    }
+    //세 개 중 두 개가 같을 때 
+    
+    printf("%d", middle);
+    return 0;
+}
