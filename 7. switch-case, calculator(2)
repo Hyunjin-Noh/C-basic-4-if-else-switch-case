@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    char ch;
+    scanf("%d %d %c", &a, &b, &ch);
+    
+    switch(ch)
+    {
+        case '+' : printf("%d %c %d = %d", a, ch, b, a + b);
+                   break;
+        case '-' : printf("%d %c %d = %d", a, ch, b, a - b);
+                   break;
+        case '*' : printf("%d %c %d = %d", a, ch, b, a * b);
+                   break;
+        case '/' : printf("%d %c %d = %d", a, ch, b, a / b);
+                   break;
+        case '%' : printf("%d %c %d = %d", a, ch, b, a % b);
+                   break;
+        default : printf("잘못 입력하셨습니다.\n");
+                  break;
+        }
+    return 0;
+}
